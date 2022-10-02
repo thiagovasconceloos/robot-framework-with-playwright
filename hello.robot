@@ -1,8 +1,7 @@
 *** Settings ***
-Documentation    Um simples arquivo em Robot
-
+Library   Browser
 
 *** Test Cases ***
-Um simples caso de teste
-    Log to Console            Hello Robot
-    
+Example Test
+    New Page    https://playwright.dev
+    Get Text    h1    contains    Playwright
