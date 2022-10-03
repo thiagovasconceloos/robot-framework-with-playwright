@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221003 16:50:58.140" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221003 17:22:52.352" rpa="false" schemaversion="3">
 <suite id="s1" name="Home" source="C:\Users\thiag\OneDrive\Documentos\Projetos\robot-framework\tests\home.robot">
-<test id="s1-t1" name="Deve validar o slogan da home page" line="14">
+<test id="s1-t1" name="Não deve logar com senha incorreta" line="23">
 <kw name="New Browser" library="Browser">
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20221003 16:50:59.476" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\Users\\thiag\\OneDrive\\Documentos\\Projetos\\robot-framework\\logs\\browser\\traces\\e5144c25-e459-4e3f-ad2e-94d49b396558"}</msg>
-<msg timestamp="20221003 16:51:00.230" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\Users\\thiag\\OneDrive\\Documentos\\Projetos\\robot-framework\\logs\\browser\\traces\\e5144c25-e459-4e3f-ad2e-94d49b396558"}</msg>
-<status status="PASS" starttime="20221003 16:50:59.475" endtime="20221003 16:51:00.230"/>
+<msg timestamp="20221003 17:22:53.670" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\Users\\thiag\\OneDrive\\Documentos\\Projetos\\robot-framework\\logs\\browser\\traces\\952370a6-6fd2-4ce7-b24e-5c9e4838e477"}</msg>
+<msg timestamp="20221003 17:22:54.341" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\Users\\thiag\\OneDrive\\Documentos\\Projetos\\robot-framework\\logs\\browser\\traces\\952370a6-6fd2-4ce7-b24e-5c9e4838e477"}</msg>
+<status status="PASS" starttime="20221003 17:22:53.670" endtime="20221003 17:22:54.341"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>https://trade-sticker-dev.vercel.app/</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20221003 16:51:01.894" level="INFO">Successfully initialized new page object and opened url: https://trade-sticker-dev.vercel.app/</msg>
-<msg timestamp="20221003 16:51:01.894" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<status status="PASS" starttime="20221003 16:51:00.230" endtime="20221003 16:51:01.894"/>
+<msg timestamp="20221003 17:22:56.168" level="INFO">Successfully initialized new page object and opened url: https://trade-sticker-dev.vercel.app/</msg>
+<msg timestamp="20221003 17:22:56.168" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20221003 17:22:54.341" endtime="20221003 17:22:56.168"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>input[name="email"]</arg>
@@ -26,51 +26,75 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20221003 16:51:01.895" level="INFO">Fills the text 'papito@gmail.com' in the given field.</msg>
-<status status="PASS" starttime="20221003 16:51:01.895" endtime="20221003 16:51:01.972"/>
+<msg timestamp="20221003 17:22:56.170" level="INFO">Fills the text 'papito@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20221003 17:22:56.169" endtime="20221003 17:22:56.232"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>input[name="password"]</arg>
-<arg>vaibrasil</arg>
+<arg>abc123</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20221003 16:51:01.973" level="INFO">Fills the text 'vaibrasil' in the given field.</msg>
-<status status="PASS" starttime="20221003 16:51:01.973" endtime="20221003 16:51:02.003"/>
+<msg timestamp="20221003 17:22:56.234" level="INFO">Fills the text 'abc123' in the given field.</msg>
+<status status="PASS" starttime="20221003 17:22:56.233" endtime="20221003 17:22:56.260"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>css=button &gt;&gt; text=Entrar</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20221003 16:51:02.004" endtime="20221003 16:51:02.119"/>
+<status status="PASS" starttime="20221003 17:22:56.261" endtime="20221003 17:22:56.319"/>
 </kw>
-<kw name="Get Text" library="Browser">
-<arg>css=.header-content strong</arg>
-<arg>equal</arg>
-<arg>${header_title}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${locator}</var>
+<arg>css=.Toastify__toast-body div &gt;&gt; text=Credenciais inválidas, tente novamente!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221003 17:22:56.321" level="INFO">${locator} = css=.Toastify__toast-body div &gt;&gt; text=Credenciais inválidas, tente novamente!</msg>
+<status status="PASS" starttime="20221003 17:22:56.321" endtime="20221003 17:22:56.321"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${locator}</arg>
+<arg>visible</arg>
+<arg>4</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20221003 17:22:56.335" level="INFO">Waited for Element with selector css=.Toastify__toast-body div &gt;&gt; text=Credenciais inválidas, tente novamente! at state visible</msg>
+<status status="PASS" starttime="20221003 17:22:56.322" endtime="20221003 17:22:56.335"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221003 17:22:57.345" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221003 17:22:56.336" endtime="20221003 17:22:57.345"/>
+</kw>
+<kw name="Get Page Source" library="Browser">
+<var>${temp}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" starttime="20221003 16:51:02.120" endtime="20221003 16:51:02.153"/>
+<doc>Gets pages HTML source as a string.</doc>
+<msg timestamp="20221003 17:22:57.370" level="INFO">${temp} = &lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;&lt;meta name="theme-color" content="#000000"&gt;&lt;link rel="preconnect" href="ht...</msg>
+<status status="PASS" starttime="20221003 17:22:57.348" endtime="20221003 17:22:57.370"/>
 </kw>
-<kw name="Take Screenshot" library="Browser">
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<msg timestamp="20221003 16:51:02.531" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20221003 16:51:02.154" endtime="20221003 16:51:02.531"/>
+<kw name="Log" library="BuiltIn">
+<arg>${temp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221003 17:22:57.374" level="INFO">&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;&lt;meta name="theme-color" content="#000000"&gt;&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""&gt;&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;amp;display=swap" rel="stylesheet"&gt;&lt;title&gt;Trade Sticker by Papito&lt;/title&gt;&lt;script defer="defer" src="/static/js/main.eb530daf.js"&gt;&lt;/script&gt;&lt;link href="/static/css/main.db832a33.css" rel="stylesheet"&gt;&lt;/head&gt;&lt;body&gt;&lt;noscript&gt;You need to enable JavaScript to run this app.&lt;/noscript&gt;&lt;div id="root"&gt;&lt;div id="page-landing"&gt;&lt;div id="page-landing-content" class="container"&gt;&lt;div class="logo-container"&gt;&lt;img src="/static/media/logo.fc08a05795052d54c7603284e40d746d.svg" alt="Encontre um User" width="400"&gt;&lt;h2&gt;Conectando colecionadores de figurinhas da copa.&lt;/h2&gt;&lt;/div&gt;&lt;div class="form-container"&gt;&lt;form class="login-form"&gt;&lt;h2&gt;Acesse sua conta&lt;/h2&gt;&lt;div class="input-block"&gt;&lt;input name="email" type="email" placeholder="Seu email" value="papito@gmail.com"&gt;&lt;/div&gt;&lt;div class="input-block"&gt;&lt;input name="password" type="password" placeholder="Senha secreta" value="abc123"&gt;&lt;/div&gt;&lt;div class="input-block"&gt;&lt;label&gt; &lt;input name="remember" type="checkbox"&gt; Lembrar meus dados&lt;/label&gt;&lt;/div&gt;&lt;button class="button" type="submit"&gt;Entrar&lt;/button&gt;&lt;/form&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="Toastify"&gt;&lt;div class="Toastify__toast-container Toastify__toast-container--top-right"&gt;&lt;div id="c5rss63" class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error" style="--nth:1; --len:1;"&gt;&lt;div role="alert" class="Toastify__toast-body"&gt;&lt;div class="Toastify__toast-icon Toastify--animate-icon Toastify__zoom-enter"&gt;&lt;svg viewBox="0 0 24 24" width="100%" height="100%" fill="var(--toastify-icon-color-error)"&gt;&lt;path d="M11.983 0a12.206 12.206 0 00-8.51 3.653A11.8 11.8 0 000 12.207 11.779 11.779 0 0011.8 24h.214A12.111 12.111 0 0024 11.791 11.766 11.766 0 0011.983 0zM10.5 16.542a1.476 1.476 0 011.449-1.53h.027a1.527 1.527 0 011.523 1.47 1.475 1.475 0 01-1.449 1.53h-.027a1.529 1.529 0 01-1.523-1.47zM11 12.5v-6a1 1 0 012 0v6a1 1 0 11-2 0z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div&gt;Credenciais inválidas, tente novamente!&lt;/div&gt;&lt;/div&gt;&lt;button class="Toastify__close-button Toastify__close-button--light" type="button" aria-label="close"&gt;&lt;svg aria-hidden="true" viewBox="0 0 14 16"&gt;&lt;path fill-rule="evenodd" d="M7.71 8.23l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75L1 11.98l3.75-3.75L1 4.48 2.48 3l3.75 3.75L9.98 3l1.48 1.48-3.75 3.75z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;&lt;div role="progressbar" aria-hidden="false" aria-label="notification timer" class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--error" style="animation-duration: 5000ms; animation-play-state: running; opacity: 1;"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<status status="PASS" starttime="20221003 17:22:57.373" endtime="20221003 17:22:57.378"/>
 </kw>
-<status status="PASS" starttime="20221003 16:50:59.472" endtime="20221003 16:51:02.532"/>
+<tag>inv_pass</tag>
+<status status="PASS" starttime="20221003 17:22:53.670" endtime="20221003 17:22:57.380"/>
 </test>
 <doc>Login Tests</doc>
-<status status="PASS" starttime="20221003 16:50:58.143" endtime="20221003 16:51:02.610"/>
+<status status="PASS" starttime="20221003 17:22:52.352" endtime="20221003 17:22:57.489"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">inv_pass</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Home">Home</stat>
