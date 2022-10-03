@@ -12,8 +12,7 @@ ${header_title}    Aquela figurinha incrível a um clique de distância.
 
 *** Test Cases ***
 Deve logar com sucesso.
-    New Browser                  headless=False
-    New Page                     https://trade-sticker-dev.vercel.app/
+    Go To Login Page   
     Fill Text                    input[name="email"]   papito@gmail.com
     Fill Text                    input[name="password"]   vaibrasil
     Click                        css=button >> text=Entrar
@@ -21,9 +20,7 @@ Deve logar com sucesso.
     
 
 Não deve logar com senha incorreta
-   [Tags]                        inv_pass
-    New Browser                  headless=False
-    New Page                     https://trade-sticker-dev.vercel.app/
+    Go To Login Page   
     Fill Text                    input[name="email"]   papito@gmail.com
     Fill Text                    input[name="password"]   abc123
     Click                        css=button >> text=Entrar
@@ -34,3 +31,11 @@ Não deve logar com senha incorreta
     Sleep                         1
     ${temp}                       Get Page Source        
     Log                           ${temp}
+
+
+
+
+*** Keywords *** 
+ Go To Login Page   
+      New Browser                  headless=False
+      New Page                     https://trade-sticker-dev.vercel.app/
