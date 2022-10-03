@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221002 20:11:25.813" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221003 16:00:50.565" rpa="false" schemaversion="3">
 <suite id="s1" name="Hello" source="C:\Users\thiag\OneDrive\Documentos\Projetos\robot-framework\hello.robot">
 <test id="s1-t1" name="Example Test" line="5">
+<kw name="New Browser" library="Browser">
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20221003 16:00:51.926" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\Users\\thiag\\OneDrive\\Documentos\\Projetos\\robot-framework\\browser\\traces\\c3f3b8f9-4db1-4e79-bb54-7df936cec3b5"}</msg>
+<msg timestamp="20221003 16:00:52.630" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\Users\\thiag\\OneDrive\\Documentos\\Projetos\\robot-framework\\browser\\traces\\c3f3b8f9-4db1-4e79-bb54-7df936cec3b5"}</msg>
+<status status="PASS" starttime="20221003 16:00:51.926" endtime="20221003 16:00:52.630"/>
+</kw>
 <kw name="New Page" library="Browser">
-<arg>https://playwright.dev</arg>
+<arg>https://trade-sticker-dev.vercel.app/</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20221002 20:11:47.392" level="INFO">Successfully initialized new page object and opened url: https://playwright.dev</msg>
-<msg timestamp="20221002 20:11:47.392" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
-<status status="PASS" starttime="20221002 20:11:34.113" endtime="20221002 20:11:47.392"/>
+<msg timestamp="20221003 16:00:55.445" level="INFO">Successfully initialized new page object and opened url: https://trade-sticker-dev.vercel.app/</msg>
+<msg timestamp="20221003 16:00:55.445" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20221003 16:00:52.645" endtime="20221003 16:00:55.445"/>
 </kw>
 <kw name="Get Text" library="Browser">
 <arg>h1</arg>
@@ -19,22 +28,32 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" starttime="20221002 20:11:47.394" endtime="20221002 20:11:47.478"/>
+<msg timestamp="20221003 16:00:59.646" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20221003 16:00:59.646" level="FAIL">Error: Could not find active page</msg>
+<status status="FAIL" starttime="20221003 16:00:55.446" endtime="20221003 16:00:59.899"/>
 </kw>
-<status status="PASS" starttime="20221002 20:11:34.113" endtime="20221002 20:11:47.479"/>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" starttime="20221003 16:00:59.899" endtime="20221003 16:00:59.899"/>
+</kw>
+<status status="FAIL" starttime="20221003 16:00:51.915" endtime="20221003 16:00:59.904">Error: Could not find active page</status>
 </test>
-<status status="PASS" starttime="20221002 20:11:25.813" endtime="20221002 20:11:47.573"/>
+<status status="FAIL" starttime="20221003 16:00:50.576" endtime="20221003 16:00:59.936"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Hello">Hello</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Hello">Hello</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20221003 16:00:59.646" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
 </errors>
 </robot>
