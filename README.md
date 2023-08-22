@@ -5,6 +5,15 @@ O projeto " Regressivo Automação Logística" é uma iniciativa desenvolvida pe
 O principal objetivo do projeto é unificar todos os testes regressivos cruciais da nossa tribo em um pipeline único, proporcionando benefícios em termos de praticidade, confiabilidade e qualidade.
 
 
+### Histórico de Versões:
+
+| Versão         | Data           | Novidades                                               |
+| -------------- | -------------- | ------------------------------------------------------- |
+| 0.0.1          | 25 de Mai, '23 | - Incialização do projeto com a Squad Fretes       |
+| 0.0.2          | 31 de Jul, '23 | - Incialização do projeto com a Squad Estoque. |
+| 0.0.3          | 15 de Ago, '23 | - Incialização do projeto com a Squad Planejamento.          |
+| 0.0.4          | 16 de Ago, '23 | - Incialização do projeto com a Squad Auditoria de Fretes.   |
+
 
 ## Pré requisitos:
 
@@ -95,16 +104,3 @@ Nesse modo alternativo de execução, os testes serão rodados com a tag especí
 |Cenários Negativos| Valida os retornos esperados para cenarios negativos |
 
 
-
-### Histórico de Versões:
-
-| Versão         | Data           | Novidades                                               |
-| -------------- | -------------- | ------------------------------------------------------- |
-| 0.0.1          | 22 de Ago, '23 | - Funcionalidade A: Faça algo incrível com A!         |
-|                |                | - Funcionalidade B: Melhore ainda mais a experiência. |
-| 0.0.2          | 5 de Set, '23  | - Melhoria na Funcionalidade A: Mais rápida e eficiente. |
-|                |                | - Funcionalidade C: Revolucione seu fluxo de trabalho. |
-| 0.0.3          | 18 de Out, '23 | - Redesign Completo: Nova interface elegante.          |
-|                |                | - Funcionalidade D: Mais flexibilidade às suas ações. |
-___
-Feito  por [Thiago Vasconcelos](https://github.com/thiagovasconceloos/).
