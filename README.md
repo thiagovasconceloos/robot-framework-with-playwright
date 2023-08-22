@@ -18,7 +18,7 @@ Para executar este projeto, você precisará de:
 
 ## Instalação
 
-Para instalar as dependências dev, execute `npm install` (ou `npm i` para abreviar).
+Para instalar as dependências, execute `npm install` (ou `npm i` para abreviar).
 
 
 
@@ -69,8 +69,20 @@ Por padrão, os testes serão executados usando a URL da versão de homologaçã
 Os testes serão inicialmente executados sem a aplicação de tags específicas. No entanto, também existe a opção de executá-los de forma diferente usando o seguinte comando:
 
 ```
+
 npx cypress run --config video=false --env grepTags="@hlg"  allure=true
 ```
 Nesse modo alternativo de execução, os testes serão rodados com a tag específica @hlg. Além disso, o vídeo da execução será desabilitado e o relatório Allure será gerado.
+
+
+
+
+### Cenarios Executados: 
+
+| Squad| API | Descrição 
+|--|--|--|
+|Fretes| Api V2 | Valida regra de priorização de filial, valor de frete baseado na região/preço do produto |
+|Estoque| OMS | Valida regra de sku do tipo normal, restrição do tipo WN e companhia 21 para filial 1200 |
+|Estoque| Disponibilidade | Valida a disponibilidade do sku informado para a filial 1200 |
 ___
 Feito  por [Thiago Vasconcelos](https://github.com/thiagovasconceloos/).
