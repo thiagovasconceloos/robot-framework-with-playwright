@@ -6,7 +6,6 @@ O principal objetivo do projeto é unificar todos os testes regressivos cruciais
 
 
 
-
 ## Pré requisitos:
 
 Para executar este projeto, você precisará de:
@@ -68,21 +67,44 @@ Por padrão, os testes serão executados usando a URL da versão de homologaçã
 
 Os testes serão inicialmente executados sem a aplicação de tags específicas. No entanto, também existe a opção de executá-los de forma diferente usando o seguinte comando:
 
-```
+`npx cypress run --config video=false --env grepTags="@hlg"  allure=true`
 
-npx cypress run --config video=false --env grepTags="@hlg"  allure=true
-```
 Nesse modo alternativo de execução, os testes serão rodados com a tag específica @hlg. Além disso, o vídeo da execução será desabilitado e o relatório Allure será gerado.
 
 
 
 
-### Cenarios Executados: 
+### Cenarios Exclusivos: 
 
 | Squad| API | Descrição 
 |--|--|--|
-|Fretes| Api V2 | Valida regra de priorização de filial, valor de frete baseado na região/preço do produto |
+|Fretes| Calculo | Valida regra de priorização de filial, valor de frete baseado na região/preço do produto |
 |Estoque| OMS | Valida regra de sku do tipo normal, restrição do tipo WN e companhia 21 para filial 1200 |
 |Estoque| Disponibilidade | Valida a disponibilidade do sku informado para a filial 1200 |
+|Planejamento| Prazo Carga | Valida regras referente as datas ofertadas na categoria de entrega fracionada. |
+|Auditoria de Fretes| Consulta Notfis | Valida motivos de integração da Notfis |
+
+
+### Cenarios Gerais: 
+
+| Testes| Descrição |
+|--|--|
+|Contrato| Valida o contrato |
+|Response Time| Valida a duração do response time, atualmente deve estar abaixo de 1000ms (1s) |
+|Response Code| Valida o status code HTTP retornado |
+|Cenários Negativos| Valida os retornos esperados para cenarios negativos |
+
+
+
+### Histórico de Versões:
+
+| Versão         | Data           | Novidades                                               |
+| -------------- | -------------- | ------------------------------------------------------- |
+| 0.0.1          | 22 de Ago, '23 | - Funcionalidade A: Faça algo incrível com A!         |
+|                |                | - Funcionalidade B: Melhore ainda mais a experiência. |
+| 0.0.2          | 5 de Set, '23  | - Melhoria na Funcionalidade A: Mais rápida e eficiente. |
+|                |                | - Funcionalidade C: Revolucione seu fluxo de trabalho. |
+| 0.0.3          | 18 de Out, '23 | - Redesign Completo: Nova interface elegante.          |
+|                |                | - Funcionalidade D: Mais flexibilidade às suas ações. |
 ___
 Feito  por [Thiago Vasconcelos](https://github.com/thiagovasconceloos/).
